@@ -1,0 +1,19 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+auth.agf.com	TRUE	/	FALSE	1999999999	DT	DI0xERazRZ_QgasZb4FT9LQwA
+perspectives.agf.com	TRUE	/	FALSE	1999999999	ip_region	US
+perspectives.agf.com	TRUE	/	FALSE	1999999999	ip_city	Lakeway
+perspectives.agf.com	TRUE	/	FALSE	1999999999	ip_prov	Texas
+perspectives.agf.com	TRUE	/	FALSE	1999999999	PHPSESSID	4f68ef01942540d36946490081ca17b7
+auth.agf.com	TRUE	/	FALSE	1999999999	JSESSIONID	662331758225C559CAEA91CC5304D852
+auth.agf.com	TRUE	/	FALSE	1999999999	t	default
+events.agf.com	TRUE	/	FALSE	1999999999	eventguestside-service-session	node02duyx5t60u78jpr3qfg9pe1x14973.node0
+go.agf.com	TRUE	/	FALSE	1999999999	pardot	deleted
+go.agf.com	TRUE	/	FALSE	1999999999	visitor_id869121	581804226
+go.agf.com	TRUE	/	FALSE	1999999999	visitor_id869121-hash	bd002bb9e811dce43df2e9290f1da9a074822a1e26e0d1bb096ef572a37f719eb6609002f444ae25d183bca20876fcbb2b8f2e6f
+go.agf.com	TRUE	/	FALSE	1999999999	SameSite	None
+perspectives.agf.com	TRUE	/	FALSE	1999999999	site	institutional
+perspectives.agf.com	TRUE	/	FALSE	1999999999	region	us
+www.agf.com	TRUE	/	FALSE	1999999999	JSESSIONID	0000vC9kc3X8VcBWLPKQzqKxrN2:1fm13gg6g
+.www.agf.com	TRUE	/	FALSE	1999999999	TS01105e80	01820c3fcfec56dc447dd525a17284abdf818b35f70d2043d95ee0078c3b8cee160bf014476d3c13ef0fb2f60bfee72a4183400875
+

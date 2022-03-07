@@ -1,0 +1,64 @@
+/* reset.css | Resets default browser CSS. */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, caption,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  line-height: 1.5em;
+  /*vertical-align: baseline;*/
+}
+
+a { line-height: normal; } /* Needed for tab navigation to render correctly */ 
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table, tbody, tfoot, thead, tr, th, td { border-collapse: separate;
+        border-spacing: 0;
+        margin: 0;
+        padding: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+}
+
+caption, th, td {font-weight: normal; }
+/* table, td, th { vertical-align: middle; } */
+.invitation caption, .invitation th, .invitation td { line-height: normal; }
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section { display: block; }
+
+
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img { border: none; }
+
+/*  9.0 cvent footer style */
+.cvent-footer-wrapper{text-align:center; padding:10px 0; font-family:Arial, Verdana,Helvetica,sans-serif;}
+.cvent-footer-wrapper p {margin:0; padding:0;}
+.cvent-footer-wrapper span{padding:0 2px;}
+.cvent-footer-wrapper img.cvent-logo{width:124px; height:35px; margin-bottom:10px;}
+.cvent-footer-wrapper ul, .cvent-footer-wrapper li{list-style:none; margin:0; padding:0;}
+.cvent-footer-wrapper li{display:inline;}
+.cvent-footer-wrapper li a{text-decoration:none;}
+.cvent-footer-wrapper li a:hover{text-decoration:underline;}
+
+/* Set ul > li for bullet point formatting for Chrome browser */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    #aspnetForm .travel table ul li span {
+		display: block;
+	}
+}

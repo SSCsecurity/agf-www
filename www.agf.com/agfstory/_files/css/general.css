@@ -1,0 +1,511 @@
+/*******************************************************************************
+*******************************   GENERIC SITE   *******************************
+*******************************************************************************/
+
+/*********************************** STYLES ***********************************/
+
+/************** MAIN **************/
+html {
+    height: auto;
+    min-height: 100%;
+    overflow-y: scroll;
+    vertical-align:top;
+    /*opacity: 0;*/
+}
+body {
+    color: #070707;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    height: 100%;
+    width: 100%;
+}
+img { display: block; border: none; }
+ul { list-style: none outside none; margin: 0; padding: 0; }
+a { color: #000; text-decoration: none; }
+a:hover { color: #1B7FBF;  text-decoration: none; }
+
+.left { float: left; } 
+.right { float: right; }
+
+.clear { clear: both; }
+.zero { margin:0; padding:0; }
+.text_center { text-align: center; }
+
+/************** DEFAULT STYLE **************/
+
+/************** LINKS STYLE **************/
+
+/******************************************************************************/
+
+
+
+/*********************************** LAYOUT ***********************************/
+
+/************** HEADER **************/
+
+section#header {
+    background-color: #ebebeb;
+    margin-top: 1px;
+}
+/*.header {*/
+/*    width: 100%;*/
+/*    height: 160px;*/
+/*    position: relative;*/
+/*}*/
+.header img {
+    width: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 95px 0 0 37px;
+}
+#language {
+    background-color: #fff;
+    border-bottom: 1px solid #eca828;
+    width: 100%;
+    height: 30px;
+}
+.language {
+    width: auto;
+    float: right;
+    padding: 5px 0;
+}
+.language span {
+    display: inline-block;
+    width: 50px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.language span:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.language span.active {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+/************** FOOTER **************/
+
+#footer { border-top: 8px solid #ed5a36; margin: 30px 0 0; }
+.footer {
+    background-color: #dbdede;
+    margin-top: 2px;
+    border-top: thin solid #dbdbdb;
+}
+.content-footer { width: 100%; text-align: center; margin: 40px 0 10px 0; }
+.content-footer a{display:inline-block;}
+.content-footer:last-child {
+    margin-top:0px;
+}
+.icon-logo {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.icon-logo img {
+    height: 30px;
+}
+
+.footer ul { margin: 0 20px 20px; vertical-align: top; width: 80%; font-size: 14px; }
+.footer ul li { display: inline-block; width: 24%; }
+.footer li a { color: #203232; }
+
+.footerLinks { margin: 0; padding: 0; }
+.footerCol { display: inline-block; }
+
+
+/******************************************************************************/
+
+
+
+/********************************* NAVIGATION *********************************/
+
+/************** NAVIGATION TOP **************/
+
+/************** MOBILE NAVIGATION **************/
+
+#mobile-nav { 
+    position: absolute;
+    width: 100%;
+    z-index: 1999 !important;
+    border-top: thin solid #dbdbdb;
+}
+
+.mobile-nav {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    margin: 0;
+}
+
+.mobile-nav .navbar-header {
+    background-color: #e8eaea;
+}
+
+.navbar-header .navbar-toggle {
+    border: none;
+    float: left;
+    margin-left: 15px;
+}
+
+.navbar-header .navbar-toggle .icon-bar{
+    width: 51px;
+    background-color: #203232;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 8px;
+}
+
+.navbar-header .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+
+#myNavbar.navbar-collapse {
+    box-shadow: none;
+    padding-top: 4px;
+    border: none;
+}
+#myNavbar .navbar-nav {
+    width: 122px;
+    margin: 0;
+    background-color: rgb(199, 204, 204);
+}
+
+#myNavbar .navbar-nav li { 
+    width: 100%;
+    margin: 0;
+}
+
+#myNavbar .navbar-nav li a { 
+    color: #fff; 
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    max-width: 122px;
+}
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover {
+    /*background-color: rgb(193, 170, 195);*/
+    background-color: #ed5a36;
+}
+
+#myNavbar .navbar-nav li .selected {
+    /*background-color: rgb(193, 170, 195);*/
+    background-color: #ed5a36;
+}
+
+
+@media only screen and (min-width: 992px) {
+    #desktop-nav {
+        display: block !important;
+    }
+    #mobile-nav {
+        display: none !important;
+    }
+
+/************** DESKTOP NAVIGATION **************/
+.horizontal-timeline {
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.horizontal-timeline .timeline {
+  position: relative;
+  top: 12px;
+  height: 85px;
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.horizontal-timeline .events-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0 0;
+  overflow: hidden;
+}
+
+.horizontal-timeline .events {
+  /* this is the grey line/timeline */
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 49px;
+  height: 2px;
+  /* width will be set using JavaScript */
+  background: #203232;
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.horizontal-timeline .events li {
+    display: inline-block;
+    width: 14.25%;
+    height: 2px;
+    float: left;
+    /*text-align: center; doesn't work in IE*/
+    padding-left:7.2%;
+}
+
+.horizontal-timeline .filling-line {
+  /* this is used to create the green line filling the timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #ed5a36;
+  /*-webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;*/
+}
+.horizontal-timeline .events a {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 18px;
+  width: 50px;
+  padding-bottom: 15px;
+  margin-left: -25px;
+  color: #203232;
+  /* fix bug on Safari - text flickering while timeline translates */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.horizontal-timeline .events a::after {
+  /* this is used to create the event spot */
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -5px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #203232;
+  -webkit-transition: background-color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.horizontal-timeline .events a.selected {
+  font-size: 30px;
+  color: #ed5a36;
+  pointer-events: none;
+  transition: fontSize 0.3s ease-in-out;
+  -webkit-transition: fontSize 0.3s ease-in-out;
+  -moz-transition: fontSize 0.3s ease-in-out;
+  -ms-transition: fontSize 0.3s ease-in-out;
+  -o-transition: fontSize 0.3s ease-in-out;
+}
+.horizontal-timeline .events a.selected::after {
+  background-color: #ed5a36;
+  border-color: #ed5a36;
+  height: 14px;
+  width: 14px;
+}
+.horizontal-timeline .events a.prev::after {
+  border-color: #eca828;
+}
+
+
+}
+
+@media only screen and (max-width: 991px) {
+    #desktop-nav {
+        display: none !important;
+    }
+    #mobile-nav {
+        display: block !important;
+    }
+    .events {
+      background-color: #e8eaea;
+    }
+    .navbar-nav {
+      width: 122px;
+      margin-left: 15px;
+      margin-top: 5px;
+      background-color: rgb(199, 204, 204);
+    }
+    .navbar-nav li.selected {
+      background-color: #ed5a36;
+    }
+
+    .navbar-nav li:hover {
+      background-color: #ed5a36;
+    }
+    .navbar-nav li a  {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 400;
+      text-decoration: none;
+      max-width: 122px;
+      margin-left: 15px;
+    }
+    .navbar-toggler {
+      padding-top: 8px
+    }
+    
+    .hidden-xs {
+        display: none;
+    }
+    .og-details p {
+      margin: 0 0 2px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+  .og-details p {
+    font-size: 10.5px;
+    margin: 0 0 2px;
+    padding-left: 10px;
+    padding-right: : 10px;
+  }
+  .og-details ul li {
+    font-size: 9.5px;
+  }
+
+  .og-details h4 {
+      font-size: 12px;
+      margin-bottom: 1px;
+  }
+
+  .og-details h3 {
+      font-size: 18px;
+  }
+  .og-expander-inner{
+    padding-top: 10px;
+  }
+}
+
+
+/************** NAVIGATION SIDE **************/
+
+/******************************************************************************/
+
+
+
+/*********************************** FORMATS **********************************/
+
+/******************************************************************************/
+
+@media (min-width: 768px) {
+   .main .container {
+        width: 760px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container, .main .container {
+        width: 970px;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+   .container, .main .container {
+        width: 1170px;
+    }
+}
+
+@media (min-width: 1600px) {
+   
+}
+
+@media (max-width: 1199px)  {
+
+}
+@media (max-width: 991px)  {
+    .navbar-header { float: none; }
+    .navbar-toggle { display: block; }
+    #myNavbar.collapse { display: none!important; }
+    #myNavbar.collapse.in { display: block!important;}
+    
+    .header img {
+        margin-left: 0px;
+    }  
+}
+@media (max-width: 767px) {
+    
+}
+
+@media (max-width: 480px) {
+    .header img {
+        width: 300px;
+    }
+    .content-footer {
+        margin: 30px 0;
+    }
+    .footer ul {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.quote-name strong {
+    font-weight: 700;
+}
+
+.purple h6 {
+    font-size: 12px;
+}
+
+.purple h5 {
+    font-size: 14px;
+}
+.purple p {
+	 margin: 0 0 5px;
+}
+
+.pink h5 {
+    font-size: 14px;
+}
+
+ .pink p {
+    margin: 0 0 5px;
+}
+
+.dark-orange p {
+    margin: 0 0 5px;
+}
+
+.orange p{
+    margin: 0 0 5px;
+}
+
+.og-details ul li {
+    font-size: 10px;
+}

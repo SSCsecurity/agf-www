@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    
+<!-- Mirrored from www.agf.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Mar 2022 04:46:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+        <script>
+            window.onload = function () { 
+                var country = "ca";
+				var redirtectURL = "ca/en/index.html";
+                var cookieName = "AGFRegion";
+                var AGFRegionCookieValue = getCookie(cookieName);
+                console.log(AGFRegionCookieValue);
+                if (AGFRegionCookieValue == null) {
+                    callAjax('https://ipinfo.io/json?token=d0f9ef51bc9f67', country, redirtectURL, cookieName);
+                } else {
+                    if(AGFRegionCookieValue == "us"){
+                        //document.write ("Cookies are set to US" );
+                        window.location.replace("us/index.html");
+                    } else {
+                       //document.write ("Cookies are set to CAD" );
+                       window.location.replace("ca/en/index.html");
+                    }
+                }
+            };
+            
+            function callAjax(url, country, redirtectURL, cookieName){
+                var xmlhttp;
+                xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET.html", url, true);
+                xmlhttp.onreadystatechange = function(){
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                        var ipCountry = JSON.parse(xmlhttp.responseText).country;
+                        if(ipCountry == "CA"){
+						    setCookie(cookieName, country);
+						} else if(ipCountry == "US"){
+							country = JSON.parse(xmlhttp.responseText).country.toLowerCase();
+							setCookie(cookieName, country);
+							redirtectURL = "us/index.html";
+						} else {
+						    redirtectURL = "institutional/index.html";
+						}
+						//document.write ("Redirect:" + redirtectURL);
+						window.location.replace(redirtectURL);
+                    } else if (xmlhttp.status > 299 && xmlhttp.readyState == 4) {
+                        setCookie(cookieName, country);
+                        //document.write ("Redirect:" + redirtectURL);
+						window.location.replace(redirtectURL);
+                    }
+                }
+                xmlhttp.onerror = function() {
+                    console.log('xmlHTTP Error', xmlHTTP.responseText);
+                    //document.write ( xmlHTTP.responseText);
+                    setCookie(cookieName, country);
+				    window.location.replace(redirtectURL);
+                }
+                xmlhttp.send();
+            }
+            
+            /**Sets Cookie */
+            function setCookie(name, value){
+                //console.log("Inside setCookie function");
+                //var setCookieValue = [value]
+                //document.cookie = name + "=" + JSON.stringify(setCookieValue)+"; expires=Thu, 31 Dec 2037 00:00:00: GMT;";
+                document.cookie = name + "=" + value + "; expires=Thu, 31 Dec 2037 00:00:00: GMT; path=/";
+            };
+            
+            /**Gets Cookie */
+            function getCookie(name){
+                //console.log("Inside getCookie function");
+                var cookies = document.cookie.split(";");
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].split("=");
+                    if(name == cookie[0].trim()) {
+                        var cookieValue = cookie[1].replace(/[^a-z]+/g, "");
+                        return cookieValue;
+                    }
+                }
+                return null;
+            };
+        </script>
+    </head>
+    <body></body>
+
+<!-- Mirrored from www.agf.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Mar 2022 04:46:06 GMT -->
+</html>
